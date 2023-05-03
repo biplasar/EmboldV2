@@ -1,0 +1,37 @@
+<div class = "row">
+    <h2> Repository List</h2>
+</div>
+
+<table class = "table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th> Repository Name</th>
+            <th> Repository Type</th>
+            <th> Repository Languages</th>
+            <th> Repository LOC</th>
+            <th> Overall Rating </th>
+            <th> Last Scanned Date</th>
+            <th> Scan Repository </th>
+            <th> Scan Report </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let repository of repositories" >
+            <td> {{ repository.name }} </td>
+            <td> {{ repository.type }} </td>
+            <td> {{ repository.languages }} </td>
+            <td> {{ repository.loc }} </td>
+            <td> {{ repository.overallRating }} </td>
+            <td> {{ repository.lastScanDate }} </td>
+            <td>
+                <!--<button  class = "btn btn-primary"> Scan Repository</button>-->
+                <button (click) = "scanRepository(repository.uid)" class = "btn btn-primary"> Scan</button>
+                <!--<button (click) = "getScanReport(repository.uid)" class = "btn btn-primary" style="margin-left: 10px"> View Report</button>-->
+            </td>
+            <td>
+                <!--<a routerLink="['/repository-issuelist', repository.uid]">Scan Report</a>-->
+                <button (click) = "getScanReport(repository.uid)" class = "btn btn-primary"> Scan Report</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
