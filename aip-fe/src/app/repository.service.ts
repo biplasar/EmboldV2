@@ -8,8 +8,9 @@ import { Observable } from 'rxjs';
 })
 export class RepositoryService {
 
-  private baseURL = "/api";
+  //private baseURL = "/api";
   //private baseURL = "/";
+  private baseURL = "http://sipembold.eastus.cloudapp.azure.com:6000/";
 
   constructor(private httpClient: HttpClient) {
   }
