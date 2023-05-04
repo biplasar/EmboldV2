@@ -10,7 +10,7 @@ export class RepositoryService {
 
   //private baseURL = "/api";
   //private baseURL = "/";
-  private baseURL = "http://sipembold.eastus.cloudapp.azure.com:6000/";
+  private baseURL = "http://sipembold.eastus.cloudapp.azure.com:6000/repositories";
 
   constructor(private httpClient: HttpClient) {
   }
